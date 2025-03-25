@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="123" WwiseVersion="v2024.1.3" WwiseBuild="8749">
+<WwiseDocument Type="Project" SchemaVersion="119" WwiseVersion="v2023.1.11" WwiseBuild="8682">
 	<ProjectInfo>
-		<Project Name="testwwise" ID="{1055B437-81CA-47E8-B7AF-372072FBDB9E}">
+		<Project Name="test2023" ID="{84401019-72EF-4939-A44E-5D2997692F2F}">
 			<Platforms>
-				<Platform Name="Windows" ReferencePlatform="Windows" ID="{0AAC471A-2C24-428E-B168-848949BB553A}"/>
+				<Platform Name="Windows" ReferencePlatform="Windows" ID="{E02C0105-BE89-43EF-A0B0-66BF146C29C2}"/>
 			</Platforms>
 			<LanguageList>
-				<Language Name="English(US)" ID="{977CE730-84D4-4180-8176-1DA3ECED2AEF}"/>
-				<Language Name="External" ID="{358B4DA6-27F6-4C97-9DBB-ECB498D57990}"/>
-				<Language Name="Mixed" ID="{E2E300AF-4A97-4B6D-877F-000DB0F29803}"/>
-				<Language Name="SFX" ID="{115E9FDA-28CB-4E9C-A053-E91256EBA8AB}"/>
+				<Language Name="English(US)" ID="{F2D9375C-0D75-47A2-B9A0-319DF40B36CB}"/>
+				<Language Name="External" ID="{18C5A064-6C3B-4F6E-BF3B-B5DADFA17F93}"/>
+				<Language Name="Mixed" ID="{E2C9019C-5DA1-4269-A2F2-7CAEAA0E5366}"/>
+				<Language Name="SFX" ID="{2DDAEDE7-5C95-48A0-AE21-69F9939A3A30}"/>
 			</LanguageList>
 			<PropertyList>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -19,10 +19,10 @@
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
 					</ValueList>
 				</Property>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
@@ -48,8 +48,12 @@
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
-				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2024.1.3|Build=8749|VersionName=v2024.1.3|Config=Release"/>
+				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2023.1.11|Build=8682|VersionName=v2023.1.11|Config=Release"/>
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
@@ -150,15 +154,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="PCM" PluginType="1" CompanyID="0" PluginID="1">
-					<PropertyList>
-						<Property Name="MaxBitDepth" Type="int32">
-							<ValueList>
-								<Value>16</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-				</SharedPropertyList>
+				<SharedPropertyList ClassName="PCM" PluginType="1" CompanyID="0" PluginID="1"/>
 				<SharedPropertyList ClassName="Sound" PluginType="0" CompanyID="1" PluginID="1">
 					<PropertyList>
 						<Property Name="3DPosition" Type="int16">
@@ -169,11 +165,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -623,7 +614,15 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="ADPCM" PluginType="1" CompanyID="0" PluginID="2"/>
+				<SharedPropertyList ClassName="ADPCM" PluginType="1" CompanyID="0" PluginID="2">
+					<PropertyList>
+						<Property Name="FixLoopMethod" Type="int32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
 				<SharedPropertyList ClassName="Folder" PluginType="0" CompanyID="1" PluginID="2">
 					<PropertyList>
 						<Property Name="Color" Type="int16">
@@ -740,29 +739,24 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
-						<Property Name="GarbageCollectWaveAnalysis" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
 						<Property Name="GenerateMainSoundBank" Type="bool">
 							<ValueList>
-								<Value>False</Value>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateMultipleBanks" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateSoundBankJSON" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateSoundBankXML" Type="bool">
 							<ValueList>
-								<Value>False</Value>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GlobalVoiceInstancesLimit" Type="int16">
@@ -827,7 +821,7 @@
 						</Property>
 						<Property Name="SoundBankGenerateEstimatedDuration" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGenerateHeaderFile" Type="bool">
@@ -837,22 +831,17 @@
 						</Property>
 						<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool">
 							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="SoundBankGeneratePrintColor" Type="bool">
-							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGeneratePrintGUID" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGeneratePrintPath" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGenerateReadableFile" Type="bool">
@@ -992,6 +981,11 @@
 						<Property Name="QualityFactor" Type="Real32">
 							<ValueList>
 								<Value>4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RenderLineAlgo" Type="int32">
+							<ValueList>
+								<Value>0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="ReservoirBiasFactor" Type="Real32">
@@ -1202,11 +1196,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -1616,11 +1605,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -2110,11 +2094,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -2756,11 +2735,6 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
 						<Property Name="BusChannelConfig" Type="int32">
 							<ValueList>
 								<Value>0</Value>
@@ -3133,6 +3107,11 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
+						<Property Name="OnSwitchChange" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 				</SharedPropertyList>
 				<SharedPropertyList ClassName="WorkUnit" PluginType="0" CompanyID="1" PluginID="25">
@@ -3178,11 +3157,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -3584,11 +3558,6 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -3971,11 +3940,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -4714,11 +4678,6 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -5111,11 +5070,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BelowThresholdBehavior" Type="int16">
@@ -5896,22 +5850,22 @@
 						</Property>
 						<Property Name="GenerateMainSoundBank" Type="bool">
 							<ValueList>
-								<Value>False</Value>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateMultipleBanks" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateSoundBankJSON" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="GenerateSoundBankXML" Type="bool">
 							<ValueList>
-								<Value>False</Value>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MediaAutoBankSubFolders" Type="bool">
@@ -5961,7 +5915,7 @@
 						</Property>
 						<Property Name="SoundBankGenerateEstimatedDuration" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGenerateHeaderFile" Type="bool">
@@ -5971,22 +5925,17 @@
 						</Property>
 						<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool">
 							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="SoundBankGeneratePrintColor" Type="bool">
-							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGeneratePrintGUID" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGeneratePrintPath" Type="bool">
 							<ValueList>
-								<Value>True</Value>
+								<Value>False</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SoundBankGenerateReadableFile" Type="bool">
@@ -6098,7 +6047,7 @@
 						</Property>
 						<Property Name="MaxSampleRate" Type="int32">
 							<ValueList>
-								<Value>48000</Value>
+								<Value>0</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MinSampleRate" Type="int32">
@@ -6285,11 +6234,6 @@
 						<Property Name="3DSpatialization" Type="int16">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="AttenuationDistanceScaling" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="BusChannelConfig" Type="int32">
@@ -9042,465 +8986,6 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="Mastering Suite" PluginType="3" CompanyID="0" PluginID="186">
-					<PropertyList>
-						<Property Name="Color" Type="int16">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Inclusion" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="OverrideColor" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1Attack" Type="Real32">
-							<ValueList>
-								<Value>0.01</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1Knee" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1MakeupGain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1Ratio" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1Release" Type="Real32">
-							<ValueList>
-								<Value>0.1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand1Threshold" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2Attack" Type="Real32">
-							<ValueList>
-								<Value>0.01</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2Knee" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2MakeupGain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2Ratio" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2Release" Type="Real32">
-							<ValueList>
-								<Value>0.1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand2Threshold" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3Attack" Type="Real32">
-							<ValueList>
-								<Value>0.01</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3Knee" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3MakeupGain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3Ratio" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3Release" Type="Real32">
-							<ValueList>
-								<Value>0.1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand3Threshold" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4Attack" Type="Real32">
-							<ValueList>
-								<Value>0.01</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4Knee" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4MakeupGain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4Ratio" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4Release" Type="Real32">
-							<ValueList>
-								<Value>0.1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorBand4Threshold" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorCrossoverFrequency1" Type="Real32">
-							<ValueList>
-								<Value>150</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorCrossoverFrequency2" Type="Real32">
-							<ValueList>
-								<Value>1000</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorCrossoverFrequency3" Type="Real32">
-							<ValueList>
-								<Value>6000</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorLinkMode" Type="int32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorLinkStereoPairs" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorLinkStrength" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="compressorNumBands" Type="int32">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
-						<Property Name="limiterAttack" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="limiterLinkChannels" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="limiterMode" Type="int32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="limiterOutputGain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="limiterRelease" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="limiterThreshold" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel1" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel10" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel11" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel12" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel2" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel3" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel4" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel5" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel6" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel7" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel8" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="masterVolumeChannel9" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="moduleEnableCompressor" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="moduleEnableLimiter" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="moduleEnableMasterVolume" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="moduleEnableParamEQ" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand1Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand1FilterMode" Type="int32">
-							<ValueList>
-								<Value>5</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand1Frequency" Type="Real32">
-							<ValueList>
-								<Value>100</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand1Gain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand1Resonance" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand2Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand2FilterMode" Type="int32">
-							<ValueList>
-								<Value>3</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand2Frequency" Type="Real32">
-							<ValueList>
-								<Value>200</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand2Gain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand2Resonance" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand3Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand3FilterMode" Type="int32">
-							<ValueList>
-								<Value>3</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand3Frequency" Type="Real32">
-							<ValueList>
-								<Value>500</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand3Gain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand3Resonance" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand4Enabled" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand4FilterMode" Type="int32">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand4Frequency" Type="Real32">
-							<ValueList>
-								<Value>1000</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand4Gain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand4Resonance" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand5Enabled" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand5FilterMode" Type="int32">
-							<ValueList>
-								<Value>3</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand5Frequency" Type="Real32">
-							<ValueList>
-								<Value>3000</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand5Gain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand5Resonance" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand6Enabled" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand6FilterMode" Type="int32">
-							<ValueList>
-								<Value>3</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand6Frequency" Type="Real32">
-							<ValueList>
-								<Value>6000</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand6Gain" Type="Real32">
-							<ValueList>
-								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramBand6Resonance" Type="Real32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="paramEqNumBands" Type="int32">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-				</SharedPropertyList>
 				<SharedPropertyList ClassName="Wwise 3D Audio Bed Mixer" PluginType="3" CompanyID="0" PluginID="190">
 					<PropertyList>
 						<Property Name="Color" Type="int16">
@@ -9678,7 +9163,7 @@
 					<Comment></Comment>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="Volume">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{DA508833-EAC0-47FF-8DCC-D2A8818547CA}">
+							<Curve Name="" ID="{40C7BB41-CFBF-449A-94BD-84DD7BF72E82}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3"/>
 								</PropertyList>
@@ -9699,7 +9184,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="LPF">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{34B84B06-FB82-43BD-A07B-A90286B57BD8}">
+							<Curve Name="" ID="{793CFCBF-0EB5-4761-9486-61E02F2F4DDD}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>
 								</PropertyList>
@@ -9720,7 +9205,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
-							<Curve Name="" ID="{D9AAC681-7C52-4FDC-91DA-FA2DA9560E65}">
+							<Curve Name="" ID="{182A5E9B-882B-438E-AF9A-91F47498CCF3}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>
 								</PropertyList>
@@ -9741,7 +9226,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="Volume">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{3A51AFD4-2099-4513-A689-2D0F138A86F5}">
+							<Curve Name="" ID="{F209B0F9-C3C5-4363-8E51-6100F897B546}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3"/>
 								</PropertyList>
@@ -9762,7 +9247,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="LPF">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{2DD82167-589B-4F1D-8868-967242F867EB}">
+							<Curve Name="" ID="{3CE59C70-4C1A-4F67-B75B-7AB8ED03E736}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>
 								</PropertyList>
@@ -9783,133 +9268,7 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
-							<Curve Name="" ID="{49DC507E-5C56-4316-B0E4-160B61ED9A8E}">
-								<PropertyList>
-									<Property Name="Flags" Type="int32" Value="1"/>
-								</PropertyList>
-								<PointList>
-									<Point>
-										<XPos>0</XPos>
-										<YPos>0</YPos>
-										<Flags>5</Flags>
-									</Point>
-									<Point>
-										<XPos>100</XPos>
-										<YPos>100</YPos>
-										<Flags>37</Flags>
-									</Point>
-								</PointList>
-							</Curve>
-						</PlatformCurve>
-					</ObsOccCurve>
-					<ObsOccCurve CurveXType="Diffraction" CurveYType="Volume">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{ECBDFCFE-D390-4472-818A-5E34CD3D5902}">
-								<PropertyList>
-									<Property Name="Flags" Type="int32" Value="3"/>
-								</PropertyList>
-								<PointList>
-									<Point>
-										<XPos>0</XPos>
-										<YPos>0</YPos>
-										<Flags>5</Flags>
-									</Point>
-									<Point>
-										<XPos>100</XPos>
-										<YPos>-200</YPos>
-										<Flags>37</Flags>
-									</Point>
-								</PointList>
-							</Curve>
-						</PlatformCurve>
-					</ObsOccCurve>
-					<ObsOccCurve CurveXType="Diffraction" CurveYType="LPF">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{1FB82D14-77F0-4737-9CD5-F4E0BB6CEE9B}">
-								<PropertyList>
-									<Property Name="Flags" Type="int32" Value="1"/>
-								</PropertyList>
-								<PointList>
-									<Point>
-										<XPos>0</XPos>
-										<YPos>0</YPos>
-										<Flags>5</Flags>
-									</Point>
-									<Point>
-										<XPos>100</XPos>
-										<YPos>100</YPos>
-										<Flags>37</Flags>
-									</Point>
-								</PointList>
-							</Curve>
-						</PlatformCurve>
-					</ObsOccCurve>
-					<ObsOccCurve CurveXType="Diffraction" CurveYType="HPF">
-						<PlatformCurve Platform="Linked" EnableCurve="false">
-							<Curve Name="" ID="{D8F3997E-B29C-47BF-9D70-C3FFB57F0C33}">
-								<PropertyList>
-									<Property Name="Flags" Type="int32" Value="1"/>
-								</PropertyList>
-								<PointList>
-									<Point>
-										<XPos>0</XPos>
-										<YPos>0</YPos>
-										<Flags>5</Flags>
-									</Point>
-									<Point>
-										<XPos>100</XPos>
-										<YPos>100</YPos>
-										<Flags>37</Flags>
-									</Point>
-								</PointList>
-							</Curve>
-						</PlatformCurve>
-					</ObsOccCurve>
-					<ObsOccCurve CurveXType="Transmission" CurveYType="Volume">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{49921344-7F4E-4024-8D50-BF718E67EDFD}">
-								<PropertyList>
-									<Property Name="Flags" Type="int32" Value="3"/>
-								</PropertyList>
-								<PointList>
-									<Point>
-										<XPos>0</XPos>
-										<YPos>0</YPos>
-										<Flags>5</Flags>
-									</Point>
-									<Point>
-										<XPos>100</XPos>
-										<YPos>-200</YPos>
-										<Flags>37</Flags>
-									</Point>
-								</PointList>
-							</Curve>
-						</PlatformCurve>
-					</ObsOccCurve>
-					<ObsOccCurve CurveXType="Transmission" CurveYType="LPF">
-						<PlatformCurve Platform="Linked" EnableCurve="true">
-							<Curve Name="" ID="{DB2FC9BB-4470-4832-A837-85A5A7D0B0DC}">
-								<PropertyList>
-									<Property Name="Flags" Type="int32" Value="1"/>
-								</PropertyList>
-								<PointList>
-									<Point>
-										<XPos>0</XPos>
-										<YPos>0</YPos>
-										<Flags>5</Flags>
-									</Point>
-									<Point>
-										<XPos>100</XPos>
-										<YPos>100</YPos>
-										<Flags>37</Flags>
-									</Point>
-								</PointList>
-							</Curve>
-						</PlatformCurve>
-					</ObsOccCurve>
-					<ObsOccCurve CurveXType="Transmission" CurveYType="HPF">
-						<PlatformCurve Platform="Linked" EnableCurve="false">
-							<Curve Name="" ID="{2268C899-4D9E-4E01-BDED-B128B4EC0796}">
+							<Curve Name="" ID="{026DC1FE-4910-4EEB-A22F-167B5F5AD2D3}">
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1"/>
 								</PropertyList>
