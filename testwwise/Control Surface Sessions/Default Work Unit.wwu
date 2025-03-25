@@ -1,32 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{00DFD7C1-FBA9-4E1B-948E-135B3DF7F961}" SchemaVersion="119">
-	<ControlSurfaceSessions>
-		<WorkUnit Name="Default Work Unit" ID="{00DFD7C1-FBA9-4E1B-948E-135B3DF7F961}" PersistMode="Standalone">
-			<ChildrenList>
-				<ControlSurfaceSession Name="Default Control Surface Session" ID="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}">
-					<ChildrenList>
-						<ControlSurfaceBindingGroup Name="Global" ID="{22108BD5-1155-4E57-8A90-D10305B55A6E}"/>
-						<ControlSurfaceBindingGroup Name="Current Selection" ID="{17D71622-B146-428B-9C18-1B8D0DE01DA2}">
-							<PropertyList>
-								<Property Name="GroupType" Type="int16" Value="4"/>
-							</PropertyList>
-							<ChildrenList>
-								<ControlSurfaceBinding Name="Binding" ID="{A6F7CE47-B37D-4077-B665-C782666388C6}">
-									<PropertyList>
-										<Property Name="TargetName" Type="string" Value="PassMidiNote"/>
-										<Property Name="TargetType" Type="int16" Value="1"/>
-									</PropertyList>
-								</ControlSurfaceBinding>
-							</ChildrenList>
-						</ControlSurfaceBindingGroup>
-						<ControlSurfaceBindingGroup Name="View Groups" ID="{A19B6EB5-71EC-43A6-858D-CAB609265151}">
-							<PropertyList>
-								<Property Name="GroupType" Type="int16" Value="3"/>
-							</PropertyList>
-						</ControlSurfaceBindingGroup>
-					</ChildrenList>
-				</ControlSurfaceSession>
-			</ChildrenList>
-		</WorkUnit>
-	</ControlSurfaceSessions>
-</WwiseDocument>
+version https://git-lfs.github.com/spec/v1
+oid sha256:74622b9e5265006942f2bdf90cf4fddff69f8efaa861f27a97637947df1cf157
+size 1478
